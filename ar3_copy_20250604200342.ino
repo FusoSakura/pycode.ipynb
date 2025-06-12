@@ -91,7 +91,7 @@ void loop() {
       myservo2.write(80);
       isAt180 = false;
       lastMoveTime = currentTime;
-    } else if (!isAt180 && currentTime - lastMoveTime >= 10000) {
+    } else if (!isAt180 && currentTime - lastMoveTime >= 15000) {
       myservo1.write(172);
       myservo2.write(172);
       isAt180 = true;
@@ -106,10 +106,10 @@ void loop() {
   }
 
   // 차량 감지된 상태에서만 부저 주파수 변경 (사이렌 효과)
-  if (carDetected && currentTime - lastBuzzChangeTime >= 250) {  // 0.25초 간격으로 변경
+  if (carDetected && currentTime - lastBuzzChangeTime >= 100) {  // 0.25초 간격으로 변경
     currentFrequency = frequencies[freqIndex];  // 현재 주파수 설정
     tone(pin11, currentFrequency);  // 부저 소리 변경
-    freqIndex = (freqIndex + 1) % 7;  // 주파수 배열 순환 (500 -> 1000 -> 2000 -> 3000 -> 2000 -> 1000 -> 500)
+    freqIndex = (freqIndex + 1) % 5;  // 주파수 배열 순환 (500 -> 1000 -> 2000 -> 3000 -> 2000 -> 1000 -> 500)
     lastBuzzChangeTime = currentTime;
   } else if (!carDetected) {
     noTone(pin11);  // 차량이 감지되지 않으면 부저 끄기
