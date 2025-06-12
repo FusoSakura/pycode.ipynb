@@ -1,8 +1,8 @@
 아두이노 핀 연결 가이드 
-서보모터1 9번
-서보모터2 10번
-빨간 LED 7번
-초록 LED 8번
-부저 11번 
+서보모터1 9번 violet
+서보모터2 10번 grey
+빨간 LED 7번 black
+초록 LED 8번 blue
+부저 11번 white 
 
-브레드보드 연결순서는 5V GND sig 순서ㅐ
+브레드보드 연결순서는 5V GND sig 순서, SIG 가 없다면 5V GND 순서 또는 SIG GND 순서
