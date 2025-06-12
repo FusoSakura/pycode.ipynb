@@ -4,5 +4,7 @@
 빨간 LED 7번 black
 초록 LED 8번 blue
 부저 11번 white 
+5V BLK
+GND BROWN
 
 브레드보드 연결순서는 5V GND sig 순서, SIG 가 없다면 5V GND 순서 또는 SIG GND 순서
